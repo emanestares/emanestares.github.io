@@ -1,54 +1,100 @@
 <!--Frederick Emmanuel S. Estares-->
-<!--created on 3/4/2022-->
-<!--CMSC100_V3L-->
+<!--created on 6/9/2024-->
+<!--CMSC100_EF2L-->
 
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
     <head>
-        <title>Eman's Github Page</title>
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="icon" href="____">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>Eman | Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <div id="leftcol">
-            <div class="container">
-                <img id="pic" src="pic.jpg">
+        <header class="header">
+            <a href="#" class="logo">Emmanuel</a>
+            
+            <nav class="navbar">
+                <a href="#home" class="clicked">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+                <a href="#footer">Contact</a>
+            </nav>
+        </header>
+
+        <section class="home">
+            <div class="home-content">
+                <h1>Hello, I'm Emman Estares</h1>
+                <h3>Fullstack Developer</h3>
+                <p>Looking for a position in a company where I can apply my technical knowledge in
+                    software development and gain valuable experiences. Knowledgeable with various
+                    programming languages, application development architecture, and backend or
+                    database development and management. Can be a team leader and/or team member.
+                </p>
+
+                <div class="home-nav">
+                    <a href="#">Contact Me</a>
+                    <a href="#">Hire Me</a>
+                </div>
             </div>
-        </div>
-        <div id="rightcol">
-            <p id="header">HELLO THERE<em>!</em></p>
-            <fieldset>
-                <legend>NAME</legend>
-                <p id="name">Frederick Emmanuel S. Estares</p>
-            </fieldset>
-            <br>
-            <fieldset>
-                <legend>NICKNAME</legend>
-                <p id="name">Emman</p>
-            </fieldset>
-            <br>
-            <fieldset>
-                <legend>FAVORITE CMSC SUBJECT SO FAR AND WHY</legend>
-                <p id="name">CMSC 130</p>
-                <p class="reason">CMSC 130 is my favorite computer science subject so far because the topics and concepts in this subject such as designing logic gates feels like a game to me. This also encapsulates the reason I love coding which is solving logic problems.</p>
-            </fieldset>
-            <br>
-            <fieldset>
-                <legend>FAVORITE GE SO FAR AND WHY</legend>
-                <p id="name">ARTS 1</p>
-                <p class="reason">ARTS 1 is my favorite General Education subject because I enjoy discussing abstract concepts and philosophizing about what do we find aesthetic and what does this say about what makes us human.</p>
-            </fieldset>
-            <br>
-            <fieldset>
-                <legend>FAVORITE PROGRAMMING LANGUAGE SO FAR AND WHY</legend>
-                <p id="name">Python</p>
-                <p class="reason">My favorite programming language so far is python because it is high-level but relatively powerful in terms of application that can be used with it. I also appreciate the amount of support of the community with multiple libraries depending on the programmer's usecase.</p>
-            </fieldset>
-            <br>
-            <fieldset>
-                <legend>FAVORITE FOOD</legend>
-                <p id="name">Fried Chicken</p>
-            </fieldset>
-        </div>
+
+            <div class="soc-med">
+                <a href="https://www.facebook.com/eman.estares/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://github.com/emanestares"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://www.linkedin.com/in/frederick-emmanuel-estares-566820245/"><i class='bx bxl-github' ></i></a>
+            </div>
+
+            <span class="photo">
+                <img src="./image.png" />
+            </span>
+        </section>
+        <section class="projects">
+            <h1 id="project-text">Previous Projects</h1>
+            
+            <div>
+                <h3 id="title-liquigaz">Procurement System</h3>
+                <img src="proj-liquigaz.png" />
+            </div>
+            <div>
+                <h3 id="title-lol">LOL Code Interpreter</h3>
+                <img src="proj-lol.png" />
+            </div>
+            <div>
+                <h3 id="title-ai">Weak Learners Algorithms</h3>
+                <img src="proj-ai.png" />
+            </div>
+            <div>
+                <h3 id="title-128">File handling of IChooSe</h3>
+                <img src="proj-128.png" />
+            </div>
+        </section>
+        <section class="lower">
+            <div class="skills">
+                <h1 class="skill-title">Skills</h1>
+                <ul>
+                    <li>Python</li>
+                    <li>C, C++</li>
+                    <li>HTML CSS JS / MERN</li>
+                    <li>AI Algorithms</li>
+                    <li>Leadership Skill</li>
+                    <li>Team Player</li>
+                    <li>Problem Solver</li>
+                    <li>Analytical</li>
+                </ul>
+            </div>
+            <div class="about">
+                <h1 class="about-title">About</h1>
+                <p>A Senior BS Computer Science student from UPLB from Bulacan. Deeply interested in with technology, programming, robotics, and gaming.</p>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="footer-right"></div>
+            <div class="footer-left"></div>
+            <a href="#home">Back to Top</a>
+        </section>
     </body>
 </html>
