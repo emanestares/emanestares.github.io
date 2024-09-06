@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 30px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .4s;
+}
+
+.logo::before {
+    content:'';
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: easeRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.logo:hover {
+    color: hwb(205 13% 43%);
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .4s;
+}
+
+.navbar a:hover,
+.navbar a.clicked {
+    color: hwb(205 19% 14%);
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 650px;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: hwb(205 19% 14%);
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .home-nav {
+    width: 400px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.home-nav a {
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    height: 100%;
+    background: hwb(205 19% 14%);
+    border: 2px solid hwb(205 19% 14%);
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600px;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-nav a:hover {
+    color: hwb(205 19% 14%);
+}
+
+.home-nav a:nth-child(2) {
+    background: transparent;
+    color: hwb(205 19% 14%);
+}
+
+.home-nav a:nth-child(2)::before {
+    background: hwb(205 19% 14%);
+}
+
+.home-nav a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.home-nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-nav a:hover::before {
+    width: 100%;
+}
+
+.soc-med {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.soc-med a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid hwb(205 19% 14%);
+    border-radius: 50%;
+    font-size: 20px;
+    color: hwb(205 19% 14%);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.soc-med a:hover {
+    color: #081b29;
+}
+
+.soc-med a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: hwb(205 19% 14%);
+    z-index: -1;
+    transition: .5s;
+}
+
+.soc-med a:hover::before {
+    width: 100%;
+}
+
+.photo img {
+    position: absolute;
+    right: 150px;
+    width: 700px;
+    bottom: 200px;
+    height: 100%;
+    top: 0;
+    background: transparent;
+    transition: 2s;
+    overflow: hidden;
+}
+
+.photo img:hover {
+    color: #081b29;
+    opacity: .6;
+}
+
+.projects {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects h3 {
+    text-align: center;
+    text-justify: auto;
+    font-size: 20px;
+    font-weight: 700;
+    color: hwb(205 19% 14%);
+}
+
+.projects img {
+    width: 300px;
+    height: 150px;
+}
+
+.lower {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes easeRight {
+    100% {
+        width: 0;
+    }
+}
