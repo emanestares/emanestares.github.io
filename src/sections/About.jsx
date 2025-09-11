@@ -25,7 +25,7 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3 grid-item">
           <div className="relative w-full h-full aspect-square rounded-3xl overflow-hidden">
             <img
-              src="../src/assets/about-photo.png"
+              src="/assets/about-photo.png"
               alt="grid-1"
               className="absolute inset-0 w-full h-full object-contain z-0"
               width={500}
@@ -93,7 +93,7 @@ const About = () => {
 
         <div className='xl:col-span-2 xl:row-span-3 grid-item-journey'>
           <div className="relative w-full h-full aspect-square rounded-3xl overflow-hidden">
-            <img src="../src/assets/coding.png" alt="grid-3" className='className="absolute inset-0 w-full h-full object-contain z-0"' />
+            <img src="/assets/coding.png" alt="grid-3" className='className="absolute inset-0 w-full h-full object-contain z-0"' />
             <div className="absolute bottom-0 left-0 w-full z-10 p-4 bg-black/40 text-white">
               <p className='grid-headtext'>My Journey</p>
               <p className='grid-subtext-journey'>Even before having a chance to create my first application, I have always been drawn to problem solving and puzzles. The satisfaction of creating programs through coding made me want to learn more and apply it to solve real world problems.</p>
@@ -103,7 +103,7 @@ const About = () => {
 
         <div className='xl:col-span-1 xl:row-span-2 grid-item'>
           <div className="relative w-full h-full aspect-square rounded-3xl overflow-hidden">
-            <img src="../src/assets/contact.png" alt="grid-4" className="absolute inset-0 w-full h-full object-cover z-0" />
+            <img src="/assets/contact.png" alt="grid-4" className="absolute inset-0 w-full h-full object-cover z-0" />
             <div className="absolute bottom-0 left-0 w-full z-10 p-4 bg-black/40 text-white">
                 <p className='grid-headtext'>Contact Me</p>
                 <p className='grid-subtext'>Click the button to copy my contact info on your clipboard.</p>

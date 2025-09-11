@@ -66,15 +66,15 @@ const Projects = () => {
                 </div>
                 <a className='flex items-center gap-2 cursor-pointer text-white-600' href="" target='_blank' rel="noreferrer">
                     <p>Give it a try</p>
-                    <img src='../src/assets/arrow.png' className='w-3 h-3' alt="arrow" />
+                    <img src='/assets/arrow.png' className='w-3 h-3' alt="arrow" />
                 </a>
             </div>
             <div className='flex justify-between items-center mt-7'>
                 <button className='arrow-btn' onClick={() => handleNavigation('previous')}>
-                    <img src='../src/assets/left.png' alt="left" className='w-7 h-7' />
+                    <img src='/assets/left.png' alt="left" className='w-7 h-7' />
                 </button>
                 <button className='arrow-btn' onClick={() => handleNavigation('next')}>
-                    <img src='../src/assets/right.png' alt="right" className='w-7 h-7' />
+                    <img src='/assets/right.png' alt="right" className='w-7 h-7' />
                 </button>
             </div>
           </div>
@@ -84,7 +84,7 @@ const Projects = () => {
                 <Center>
                     <ambientLight intensity={Math.PI} />
                     <directionalLight position={[10,10,5]} intensity={4} />
-                    <Environment background files={'../src/assets/spotlight1.jpg'} />
+                    <Environment background files={'/assets/spotlight1.jpg'} />
                     <hemisphereLight intensity={2} color="#ffffff" groundColor="#444444" />
                     <Suspense fallback={<CanvasLoader />}>
                         <group scale={1} position={[.2,0.5,0]} rotation={[0,0,0]}>

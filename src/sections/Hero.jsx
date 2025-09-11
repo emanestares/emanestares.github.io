@@ -11,7 +11,7 @@ import Robot from "../components/Robot";
 import HeroCamera from "../components/HeroCamera";
 import Button from "../components/Button";
 import Arduino from "../components/Arduino";
-import bgImage from '../assets/herobg-1.png';
+import bgImage from '/assets/herobg-1.png';
 
 const Hero = () => {
     // const controls = useControls('Room', {
