@@ -52,14 +52,14 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('../src/assets/grid-bg.jpg');
+    background-image: url('/assets/grid-bg.jpg');
   }
 
   .grid-item-journey {
     margin: 3rem;
     background-size: auto;
     background-position: center;
-    background-image: url('../src/assets/grid-bg.jpg');
+    background-image: url('/assets/grid-bg.jpg');
   }
 
   .nav-ul {

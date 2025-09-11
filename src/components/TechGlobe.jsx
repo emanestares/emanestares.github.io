@@ -6,7 +6,7 @@ import { generate } from 'random-words'
 
 function Word({ children, ...props }) {
   const color = new THREE.Color()
-  const fontProps = { font: '../src/assets/Inter-Bold.woff', fontSize: 2.5, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
+  const fontProps = { font: '/assets/Inter-Bold.woff', fontSize: 2.5, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
   const ref = useRef()
   const [hovered, setHovered] = useState(false)
   const over = (e) => (e.stopPropagation(), setHovered(true))
