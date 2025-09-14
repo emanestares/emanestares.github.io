@@ -18,7 +18,7 @@ function Word({ children, ...props }) {
   }, [hovered])
   // Tie component to the render-loop
   useFrame(({ camera }) => {
-    ref.current.material.color.lerp(color.set(hovered ? '#0051ff' : 'white'), 0.1)
+    ref.current.material.color.lerp(color.set(hovered ? 'white' : '#63666A'), 0.1)
   })
   return (
     <Billboard {...props}>
