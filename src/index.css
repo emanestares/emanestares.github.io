@@ -166,15 +166,19 @@ body {
   .contact-container {
     position: relative;
     z-index: 10;
-    background: #111827;   
+    background: #0c111b79;   
     padding: 2rem;
     border-radius: 1rem;    
-    max-width: 900px;
+    max-width: 1000px;
+    min-height: 750px;
     margin: 2rem auto;      
     color: #f3f4f6;        
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); 
-    text-align: left;       
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.199); 
+    text-align: left;   
+    align-content: center;
   }
+
+
   .contact-container h3 {
     font-size: 1.75rem;
     font-weight: 700;
@@ -186,6 +190,23 @@ body {
     line-height: 1.6;
     color: #d1d5db;
   }
+
+  .field-label {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 100px;
+  }
+
+  .field-input {
+    background-color: #172033;
+    border-radius: 0.5rem;
+    color: grey;
+    margin: 2rem 0;   
+    padding: 10px;
+    width: 100%;      
+    box-sizing: border-box; 
+  }
+
 
 
   @keyframes btn-ping {
