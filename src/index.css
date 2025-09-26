@@ -87,6 +87,8 @@ body {
   .head-text {
     @apply text-4xl sm:text-5xl font-bold text-white mb-12 mt-12;
   }
+  
+
 
   .animatedText {
     opacity: 0;
@@ -116,11 +118,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;   /* or match your img size */
+    width: 40px;  
     height: 40px;
-    border-radius: 5px; /* fully rounded */
-    background-color: rgba(156, 163, 175, 0.2); /* subtle gray fill */
-    border: 1px solid rgba(156, 163, 175, 0.4); /* light gray border */
+    border-radius: 5px; 
+    background-color: rgba(156, 163, 175, 0.2);
+    border: 1px solid rgba(156, 163, 175, 0.4); 
     padding: 6px;
     transition: all 0.2s ease-in-out;
   }
@@ -129,6 +131,24 @@ body {
     background-color: rgba(156, 163, 175, 0.3);
     transform: scale(1.05);
   }
+
+  @media (max-width: 401px) {
+    .tech-logo {
+      width: 28px;
+      height: 28px;
+      padding: 3px; /* reduce padding so it doesn’t look cramped */
+    }
+
+    .tech-logo img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .head-text {
+      @apply text-3xl sm:text-5xl font-bold text-white mb-12 mt-12;
+    }
+  }
+
 
   .project-logo {
     transition: all 0.2s ease-in-out;
@@ -190,6 +210,34 @@ body {
     line-height: 1.6;
     color: #d1d5db;
   }
+
+  @media (max-width: 401px) {
+    .contact-container .head-text {
+      font-size: 1.45rem; 
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-container p {
+      font-size: 0.8rem;  
+      line-height: 1.2;
+    }
+
+    .contact-container .field-label {
+      font-size: 0.75rem; 
+    }
+
+    .contact-container .field-input {
+      font-size: 0.875rem;
+      padding: 0.5rem;    
+      height: 2.5rem;     
+    }
+
+    .contact-container textarea.field-input {
+      height: 6rem; 
+    }
+  }
+
 
   .social-icon {
     @apply w-15 h-15 flex items-center justify-center rounded-full cursor-pointer transition-transform duration-200 hover:scale-110;

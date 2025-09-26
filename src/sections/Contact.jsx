@@ -61,8 +61,13 @@ const Contact = () => {
             <p>‎ </p>
           </div>
         <div className='contact-container'>
-          <h3 className='head-text'>Let's Talk</h3>
-          <p className='text-lg text-white-600 mt-3'>If you are looking for someone to make your ideas into actual application for mobile, desktop, and web, I am more than ready to help you! I also offer tutoring services for computer science courses. Feel free to contact me through the form below.</p>
+          <h3 className="head-text text-2xl md:text-3xl">Let's Talk</h3>
+          <p className="text-base md:text-lg text-white-600 mt-3">
+            If you are looking for someone to make your ideas into actual application 
+            for mobile, desktop, and web, I am more than ready to help you! I also 
+            offer tutoring services for computer science courses. Feel free to 
+            contact me through the form below.
+          </p>
           <p>‎ </p>
           <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col space-y-7'>
             <label className='space-y-3'>

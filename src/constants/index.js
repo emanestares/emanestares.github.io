@@ -183,7 +183,7 @@ const projects = [
   {
     name: "IChoose",
     description:
-      "ICS Room Reservation.  Seeks to provide a way for the building administrator and ICS director to keep track of the room reservations in the institute. Helped in both backend and front end of the project.",
+      "ICS Room Reservation. Provides a way for the building admins & ICS director to track the room reservations in the institute. Helped in both back & front end of the project.",
     tags: [
       {
         name: "MongoDB",
