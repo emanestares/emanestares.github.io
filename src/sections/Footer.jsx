@@ -3,20 +3,15 @@ import React from 'react'
 export const Footer = () => {
   return (
     <section className='c-space pt-7 pb-3 border-t border-black-300 flex justify-between items-center flex-wrap gap-5'>
-        <div className='text-white-500 flex gap-2'>
-            <p>Temrs & Conditions</p>
-            <p>|</p>
-            <p>Privacy Policy</p>
-        </div>
-
-        <div className="flex gap-3">
+        <p className='text-white-500 max-md:text-xs'>© 2025 Emman Estares. All Rights Reserved</p>
+        <div className="flex gap-2 max-md:gap-1">
             <a
                 href="https://github.com/emanestares"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
             >
-                <img src="/assets/github.png" alt="github" className="w-1/2 h-1/2" />
+                <img src="/assets/github.png" alt="github" className="w-1/2 h-1/2 max-md:w-1/3 max-md:h-1/3" />
             </a>
 
             <a
@@ -25,7 +20,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="social-icon"
             >
-                <img src="/assets/linkedin.png" alt="linkedin" className="w-1/2 h-1/2" />
+                <img src="/assets/linkedin.png" alt="linkedin" className="w-1/2 h-1/2 max-md:w-1/3 max-md:h-1/3" />
             </a>
 
             <a
@@ -34,10 +29,10 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="social-icon"
             >
-                <img src="/assets/facebook.png" alt="facebook" className="w-1/2 h-1/2" />
+                <img src="/assets/facebook.png" alt="facebook" className="w-1/2 h-1/2 max-md:w-1/3 max-md:h-1/3" />
             </a>
         </div>
-        <p className='text-white-500'>© 2025 Emman Estares. All Rights Reserved</p>
+        
     </section>
   )
 }
