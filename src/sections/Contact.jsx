@@ -43,7 +43,7 @@ const Contact = () => {
 
   return (
     <section className='c-space my-20' id="contact">
-      <div className='relative min-h-screen flex items-center justify-center flex-col max-h-screen max-[401px]:min-h-0 max-[401px]:max-h-none'>
+      <div className='relative min-h-screen flex items-center justify-center flex-col max-h-screen max-[499px]:min-h-0 max-[499px]:max-h-none'>
         <div className="absolute inset-0 w-full h-screen -z-10">
           <img 
             src="/assets/form-background.jpg" 

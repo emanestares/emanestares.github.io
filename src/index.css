@@ -132,7 +132,7 @@ body {
     transform: scale(1.05);
   }
 
-  @media (max-width: 401px) {
+  @media (max-width: 499px) {
     .tech-logo {
       width: 28px;
       height: 28px;
@@ -211,7 +211,7 @@ body {
     color: #d1d5db;
   }
 
-  @media (max-width: 401px) {
+  @media (max-width: 499px) {
     .contact-container .head-text {
       font-size: 1.45rem; 
       margin-top: 0.5rem;
