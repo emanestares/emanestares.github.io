@@ -7,7 +7,7 @@ const Certifications = () => {
   // Name your files anything — they'll be listed here.
   // To add more, just drop images into public/certificates/ and add entries below.
   const certs = [
-    {
+        {
       id: 1,
       title: "Learn Java",
       issuer: "Skillsoft",
@@ -26,16 +26,8 @@ const Certifications = () => {
       title: "Spring and Spring Boot",
       issuer: "Skillsoft",
       date: "2026",
-      image: "/certificates/java.png",
+      image: "/certificates/spring.png",
     },
-    // Duplicate and fill in your own entries:
-    // {
-    //   id: 2,
-    //   title: "Another Cert",
-    //   issuer: "Another Org",
-    //   date: "2023",
-    //   image: "/certificates/cert-2.jpg",
-    // },
   ];
 
   return (
