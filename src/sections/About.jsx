@@ -20,7 +20,7 @@ const About = () => {
     <section className="about-section" id="about">
       <div className="section-header">
         <span className="section-tag">Who I Am</span>
-        <h2 className="section-title">About the Dev</h2>
+        <h2 className="section-title">Hello, I am Emman</h2>
         <p className="section-subtitle">
           Building technology that makes a difference, one line of code at a time.
         </p>
