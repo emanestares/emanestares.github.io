@@ -1,40 +1,42 @@
-import React from 'react'
+import React from 'react';
 
-export const Footer = () => {
+const Footer = () => {
   return (
-    <section className='c-space pt-7 pb-3 border-t border-black-300 flex justify-between items-center flex-wrap gap-5'>
-        <p className='text-white-500 max-md:text-xs'>© 2025 Emman Estares. All Rights Reserved</p>
-        <div className="flex gap-2 max-md:gap-1">
-            <a
-                href="https://github.com/emanestares"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-            >
-                <img src="/assets/github.png" alt="github" className="w-1/2 h-1/2 max-md:w-1/3 max-md:h-1/3" />
-            </a>
-
-            <a
-                href="https://www.linkedin.com/in/frederick-emmanuel-estares-566820245/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-            >
-                <img src="/assets/linkedin.png" alt="linkedin" className="w-1/2 h-1/2 max-md:w-1/3 max-md:h-1/3" />
-            </a>
-
-            <a
-                href="https://www.facebook.com/eman.estares"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-            >
-                <img src="/assets/facebook.png" alt="facebook" className="w-1/2 h-1/2 max-md:w-1/3 max-md:h-1/3" />
-            </a>
+    <footer className="footer">
+      <div className="footer-inner">
+        <div className="footer-brand">
+          <a href="/" className="nav-logo">
+            <span className="nav-logo-bracket">&lt;</span>Emman<span className="nav-logo-bracket">/&gt;</span>
+          </a>
+          <p className="footer-tagline">Technology towards positive change.</p>
         </div>
-        
-    </section>
-  )
-}
+
+        <div className="footer-links">
+          <a href="#about" className="footer-link">About</a>
+          <a href="#work" className="footer-link">Projects</a>
+          <a href="#contact" className="footer-link">Contact</a>
+          <a href="/assets/cv.pdf" download="Emmanuel_Estares_CV.pdf" className="footer-link">Resume</a>
+        </div>
+
+        <div className="footer-socials">
+          <a href="https://github.com/emanestares" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
+            <img src="/assets/github.png" alt="github" className="w-5 h-5 object-contain" />
+          </a>
+          <a href="https://www.linkedin.com/in/frederick-emmanuel-estares-566820245/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
+            <img src="/assets/linkedin.png" alt="linkedin" className="w-5 h-5 object-contain" />
+          </a>
+          <a href="https://www.facebook.com/eman.estares" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
+            <img src="/assets/facebook.png" alt="facebook" className="w-5 h-5 object-contain" />
+          </a>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>© 2025 Frederick Emmanuel Estares · All Rights Reserved</p>
+        <p>Built with React · Three.js · Tailwind CSS</p>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

@@ -1,20 +1,9 @@
 import { texture } from "three/tsl";
 export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-    href: '#about'
-  },
-  {
-    id: "work",
-    title: "Work",
-    href: '#work'
-  },
-  {
-    id: "contact",
-    title: "Contact",
-    href: '#contact'
-  },
+  { id: "about", title: "About", href: '#about' },
+  { id: "work", title: "Work", href: '#work' },
+  { id: "certifications", title: "Certifications", href: '#certifications' },
+  { id: "contact", title: "Contact", href: '#contact' },
 ];
 
 const projects = [
