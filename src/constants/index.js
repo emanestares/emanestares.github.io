@@ -1,9 +1,68 @@
 import { texture } from "three/tsl";
 export const navLinks = [
   { id: "about", title: "About", href: '#about' },
-  { id: "work", title: "Work", href: '#work' },
+  { id: "experience", title: "Experience", href: '#experience' },
+  { id: "work", title: "Projects", href: '#work' },
   { id: "certifications", title: "Certifications", href: '#certifications' },
   { id: "contact", title: "Contact", href: '#contact' },
+];
+
+export const workExperiences = [
+  {
+    id: 1,
+    company: "Vertere Global Solutions",
+    role: "Java Programmer / Analyst",
+    period: "March 2026 – Present",
+    type: "Full-time",
+    description: "Working as a Java developer to provide solutions for different clients in various industries.",
+    tech: ["Java"],
+    icon: "💼",
+    color: "#3b82f6",
+  },
+  {
+    id: 2,
+    company: "Freelance 3D Printing",
+    role: "3D Printing Service Provider",
+    period: "Feb 2026 – Present",
+    type: "Freelance",
+    description: "Providing on-demand 3D printing services for clients — from rapid prototypes to finished parts. Using a Bambu Lab printer and Bambu Studio for slicing, optimizing print settings, and managing multi-material prints.",
+    tech: ["Bambu Lab", "Bambu Studio", "FDM Printing", "Rapid Prototyping"],
+    icon: "🖨️",
+    color: "#f97316",
+  },
+  {
+    id: 3,
+    company: "University of the Philippines – Resilience Institute",
+    role: "Full-stack Mobile Developer",
+    period: "Sept 2025 – Jan 2026",
+    type: "Contract",
+    description: "Worked as a full-stack Flutter developer, developing multiple tallying systems during drills and actual disasters for quick response and assessment (UPRI & UPM-DRRMH).",
+    tech: ["Flutter", "Dart"],
+    icon: "🛡️",
+    color: "#22d3a0",
+  },
+  {
+    id: 4,
+    company: "Liquigaz Philippines Corporation",
+    role: "Web Developer Intern",
+    period: "Jun 2024 – Aug 2024",
+    type: "Internship",
+    description: "Developed a procurement website for the company and its partners' internal use. Built widgets and functions integrated into the system alongside co-interns and supervisor.",
+    tech: ["PHP", "CakePHP", "ReactJS", "Apache", "HeidiDB"],
+    icon: "🌐",
+    color: "#a78bfa",
+  },
+  {
+    id: 5,
+    company: "Freelance",
+    role: "Computer Science Tutor",
+    period: "Aug 2021 – Jan 2022",
+    type: "Freelance",
+    description: "Tutored a computer engineering student at UP Diliman in Python programming fundamentals, helping them achieve a final grade of 1.00.",
+    tech: ["Python"],
+    icon: "📚",
+    color: "#f59e0b",
+  },
 ];
 
 const projects = [
@@ -228,4 +287,4 @@ const projects = [
   },
 ];
 
-export {  projects };
+export { projects };

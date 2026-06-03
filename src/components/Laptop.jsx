@@ -283,14 +283,6 @@ const Laptop = (props) => {
             material={materials.Back}
           />
         </group>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_50.geometry}
-          material={materials['Foam.043']}
-          position={[0, 0.016, 0]}
-          scale={9.419}
-        />
       </Float>
     )
 }

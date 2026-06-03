@@ -23,10 +23,10 @@ const Projects = () => {
   return (
     <section className="projects-section" id="work">
       <div className="section-header">
-        <span className="section-tag">My Work</span>
-        <h2 className="section-title">Works & Projects</h2>
+        <span className="section-tag">Projects</span>
+        <h2 className="section-title">Personal Projects</h2>
         <p className="section-subtitle">
-          A collection of projects spanning mobile apps, AI, robotics, and web development.
+          Personal projects and school work spanning mobile apps, AI, robotics, and web development.
         </p>
       </div>
 
