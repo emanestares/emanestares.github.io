@@ -35,9 +35,13 @@ const Hero = () => {
       {/* Giant background name — z-[2], behind 3D and text */}
       <div className="hero-bg-name" aria-hidden="true">ESTARES</div>
 
-      {/* 3D Canvas — full viewport, all objects positioned in world space */}
-      <div className="absolute inset-0 w-full h-full z-[5] pointer-events-none">
-        <Canvas className="w-full h-full" gl={{ alpha: true }} style={{ background: 'transparent' }}>
+      {/* 3D Canvas — full viewport, pointer events ON so HeroCamera mouse tracking works */}
+      <div className="absolute inset-0 w-full h-full" style={{ zIndex: 5 }}>
+        <Canvas
+          className="w-full h-full"
+          gl={{ alpha: true }}
+          style={{ background: 'transparent' }}
+        >
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
             <HeroCamera isMobile={isMobile}>
@@ -84,11 +88,12 @@ const Hero = () => {
         </Canvas>
       </div>
 
-      {/* Top-left: tag + headline */}
+      {/* Top-left: tag + headline — pointer-events none (just text) */}
       <div
-        className={`hero-topleft z-[4] transition-all duration-700 ${
+        className={`hero-topleft transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
+        style={{ pointerEvents: 'none' }}
       >
         <div className="hero-tag">Available for work</div>
         <h1 className="hero-title-new">
@@ -97,17 +102,18 @@ const Hero = () => {
         </h1>
       </div>
 
-      {/* Bottom-right: subtitle + CTA */}
+      {/* Bottom-right: subtitle + CTA — all in one stacked overlay */}
       <div
-        className={`hero-bottomright z-[4] transition-all duration-700 delay-200 ${
+        className={`hero-cta-overlay transition-all duration-700 delay-200 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
+        style={{ flexDirection: 'column', alignItems: 'flex-end', gap: '1.1rem' }}
       >
-        <p className="hero-desc-new">
+        <p className="hero-desc-new" style={{ pointerEvents: 'none', textAlign: 'right', margin: 0 }}>
           Full-stack developer with a focus on mobile, AI, and systems that matter —
           from disaster response tools to microbe classifiers.
         </p>
-        <div className="hero-cta-row">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a href="#experience" className="hero-cta-pill">
             View My Work
             <span className="hero-cta-arrow">→</span>

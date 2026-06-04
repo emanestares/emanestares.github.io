@@ -36,27 +36,11 @@ const About = () => {
               className="about-photo"
             />
           </div>
-          <div className="about-photo-info">
+          <div className="about-card-overlay">
             <p className="about-card-title">Frederick Emmanuel Estares</p>
             <p className="about-card-text">
               Passionate about Mobile Development, AI, Robotics, and technologies that create positive impact.
             </p>
-            <div className="about-stats">
-              <div className="stat">
-                <span className="stat-num">5+</span>
-                <span className="stat-label">Years Python</span>
-              </div>
-              <div className="stat-divider" />
-              <div className="stat">
-                <span className="stat-num">9+</span>
-                <span className="stat-label">Projects</span>
-              </div>
-              <div className="stat-divider" />
-              <div className="stat">
-                <span className="stat-num">3+</span>
-                <span className="stat-label">Tech Stacks</span>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -110,18 +94,20 @@ const About = () => {
             <p className="about-card-text">
               Even before creating my first application, I was drawn to problem solving and puzzles. The satisfaction of building programs through code drives me to keep learning and apply technology to solve real-world problems.
             </p>
-            <div className="journey-timeline">
-              <div className="timeline-item">
-                <span className="timeline-dot" />
-                <span>Started with Python & algorithms</span>
+            <div className="about-stats" style={{ marginTop: '0.75rem' }}>
+              <div className="stat">
+                <span className="stat-num">5+</span>
+                <span className="stat-label">Years Python</span>
               </div>
-              <div className="timeline-item">
-                <span className="timeline-dot" />
-                <span>Expanded to Mobile with Flutter</span>
+              <div className="stat-divider" />
+              <div className="stat">
+                <span className="stat-num">9+</span>
+                <span className="stat-label">Projects</span>
               </div>
-              <div className="timeline-item">
-                <span className="timeline-dot" />
-                <span>Explored AI, ML & Robotics</span>
+              <div className="stat-divider" />
+              <div className="stat">
+                <span className="stat-num">3+</span>
+                <span className="stat-label">Tech Stacks</span>
               </div>
             </div>
           </div>

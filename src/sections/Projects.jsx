@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import { Center, Environment, OrbitControls } from '@react-three/drei';
 import CanvasLoader from '../components/CanvasLoader';
 import DemoComputer from '../components/DemoComputer';
+import DemoPhone from '../components/DemoPhone';
 
 const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -129,9 +130,15 @@ const Projects = () => {
               <Environment background files={'/assets/spotlight1.jpg'} />
               <hemisphereLight intensity={2} color="#ffffff" groundColor="#444444" />
               <Suspense fallback={<CanvasLoader />}>
-                <group scale={0.75} position={[0, 0.5, 0]}>
-                  <DemoComputer texture={currentProject.texture} />
-                </group>
+                {currentProject.displayType === 'phone' ? (
+                  <group scale={3} position={[0, 0, 0]}>
+                    <DemoPhone texture={currentProject.texture} />
+                  </group>
+                ) : (
+                  <group scale={0.75} position={[0, 0.5, 0]}>
+                    <DemoComputer texture={currentProject.texture} />
+                  </group>
+                )}
               </Suspense>
             </Center>
             <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />

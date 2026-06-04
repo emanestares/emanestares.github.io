@@ -96,6 +96,7 @@ const projects = [
       boxShadow: '0px 0px 60px 0px #635BFF4D'
     },
     spotlight:"/assets/spotlight.png",
+    displayType: 'phone',
   },
   {
     name: "NameBot",
@@ -143,6 +144,7 @@ const projects = [
       boxShadow: '0px 0px 60px 0px #635BFF4D'
     },
     spotlight:"/assets/spotlight.png",
+    displayType: 'phone',
   },
   {
     name: "JPEG Steganography CLI App ",
