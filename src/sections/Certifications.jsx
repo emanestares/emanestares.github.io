@@ -28,6 +28,13 @@ const Certifications = () => {
       date: "2026",
       image: "/certificates/spring.png",
     },
+    {
+      id: 4,
+      title: "AI for Programmers",
+      issuer: "Skillsoft",
+      date: "2026",
+      image: "/certificates/aiforprog.png",
+    },
   ];
 
   return (

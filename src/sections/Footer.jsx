@@ -5,17 +5,34 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-brand">
-          <a href="/" className="nav-logo">
-            <span className="nav-logo-bracket">&lt;</span>Emman<span className="nav-logo-bracket">/&gt;</span>
+          {/* Same logo treatment as the navbar */}
+          <a href="#" className="flex items-center gap-2 select-none">
+            <img
+              src="/logo.png"
+              alt="EE Logo"
+              className="w-7 h-8"
+              style={{ filter: 'drop-shadow(0 0 6px rgba(59,111,255,0.4))' }}
+            />
+            <span style={{
+              fontFamily: "'Syne', sans-serif",
+              fontWeight: 700,
+              fontSize: '1rem',
+              letterSpacing: '0.04em',
+              background: 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}>
+              Eman Estares
+            </span>
           </a>
           <p className="footer-tagline">Technology towards positive change.</p>
         </div>
 
         <div className="footer-links">
           <a href="#about" className="footer-link">About</a>
+          <a href="#experience" className="footer-link">Experience</a>
           <a href="#work" className="footer-link">Projects</a>
           <a href="#contact" className="footer-link">Contact</a>
-          <a href="/assets/cv.pdf" download="Emmanuel_Estares_CV.pdf" className="footer-link">Resume</a>
         </div>
 
         <div className="footer-socials">

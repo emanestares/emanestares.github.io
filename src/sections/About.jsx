@@ -1,13 +1,27 @@
 import { Canvas } from '@react-three/fiber';
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy, useRef, useState, useEffect } from 'react';
 import CanvasLoader from '../components/CanvasLoader';
 import { PerspectiveCamera } from '@react-three/drei';
 import TechGlobe from '../components/TechGlobe';
 import { useMediaQuery } from 'react-responsive';
-import Globe from 'react-globe.gl';
+
+// Lazy-load the heavy Globe component — only fetched when About section mounts
+const Globe = lazy(() => import('react-globe.gl'));
 
 const About = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  const sectionRef = useRef(null);
+  const [globeVisible, setGlobeVisible] = useState(false);
+
+  // Intersection observer: only render Globe when About section is near viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setGlobeVisible(true); },
+      { rootMargin: '200px' }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
@@ -17,7 +31,7 @@ const About = () => {
   };
 
   return (
-    <section className="about-section" id="about">
+    <section className="about-section" id="about" ref={sectionRef}>
       <div className="section-header">
         <span className="section-tag">Who I Am</span>
         <h2 className="section-title">Hello, I am Emman</h2>
@@ -34,6 +48,8 @@ const About = () => {
               src="/assets/about-photo.png"
               alt="Emmanuel Estares"
               className="about-photo"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="about-card-overlay">
@@ -57,20 +73,26 @@ const About = () => {
           </div>
         </div>
 
-        {/* Globe card */}
+        {/* Globe card — lazy loaded */}
         <div className="about-card about-card-globe">
           <div className="about-world-container">
-            <Globe
-              height={isMobile ? 400 : 600}
-              width={isMobile ? 400 : 600}
-              backgroundColor="rgba(0,0,0,0)"
-              backgroundImageOpacity={0.5}
-              showAtmosphere
-              showGraticules
-              bumpImageUrl={"//unpkg.com/three-globe/example/img/earth-topology.png"}
-              globeImageUrl={"//unpkg.com/three-globe/example/img/earth-night.jpg"}
-              labelsData={[{ lat: 14.5995, lng: 120.9842, text: "📍 I'm here", color: 'white', size: 1000000 }]}
-            />
+            {globeVisible ? (
+              <Suspense fallback={<div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.4, fontSize: '0.8rem' }}>Loading map…</div>}>
+                <Globe
+                  height={isMobile ? 400 : 600}
+                  width={isMobile ? 400 : 600}
+                  backgroundColor="rgba(0,0,0,0)"
+                  backgroundImageOpacity={0.5}
+                  showAtmosphere
+                  showGraticules
+                  bumpImageUrl={"//unpkg.com/three-globe/example/img/earth-topology.png"}
+                  globeImageUrl={"//unpkg.com/three-globe/example/img/earth-night.jpg"}
+                  labelsData={[{ lat: 14.5995, lng: 120.9842, text: "📍 I'm here", color: 'white', size: 1000000 }]}
+                />
+              </Suspense>
+            ) : (
+              <div style={{ width: '100%', height: '100%' }} />
+            )}
           </div>
           <div className="about-card-overlay">
             <p className="about-card-title">Globally Competitive</p>
@@ -88,7 +110,7 @@ const About = () => {
 
         {/* Journey card */}
         <div className="about-card about-card-journey">
-          <img src="/assets/coding.png" alt="coding journey" className="about-journey-img" />
+          <img src="/assets/coding.png" alt="coding journey" className="about-journey-img" loading="lazy" decoding="async" />
           <div className="about-card-overlay">
             <p className="about-card-title">My Journey</p>
             <p className="about-card-text">
@@ -115,7 +137,7 @@ const About = () => {
 
         {/* Contact card */}
         <div className="about-card about-card-contact">
-          <img src="/assets/contact.png" alt="contact" className="about-contact-img" />
+          <img src="/assets/contact.png" alt="contact" className="about-contact-img" loading="lazy" decoding="async" />
           <div className="about-card-overlay">
             <p className="about-card-title">Let's Connect</p>
             <p className="about-card-text">Looking for a developer or tutor? I'd love to hear from you.</p>

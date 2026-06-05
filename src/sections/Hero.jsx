@@ -97,8 +97,8 @@ const Hero = () => {
       >
         <div className="hero-tag">Available for work</div>
         <h1 className="hero-title-new">
-          Building tech<br />
-          for <span className="hero-title-accent">real impact.</span>
+          Tech towards<br />
+          <span className="hero-title-accent">positive change.</span>
         </h1>
       </div>
 
@@ -118,7 +118,6 @@ const Hero = () => {
             View My Work
             <span className="hero-cta-arrow">→</span>
           </a>
-          <a href="#about" className="hero-cta-ghost">About Me</a>
         </div>
       </div>
 
